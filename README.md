@@ -36,6 +36,21 @@
   mvn liquibase:update
 ```
 
+## Команды
+
+После запуска к серверу можно обратиться по адресу: http://localhost:8080
+
+## Пользователи
+
+- `POST /users/registration` - регистрация пользователя.
+- `GET /users/userInfo` - выводит имя текущего пользователя.
+
+## Ссылки
+
+- `POST /links/convert` - сохраняет ссылку и возвращает уникальный код.
+- `GET /links/redirect/{code}` - возвращает адрес ассоциированный с кодом.
+- `GET /links/statistic` - выводит все адреса закрепленные за пользователем и их статистику вызовов.
+
 ## Технологии
 
 [![java](https://img.shields.io/badge/java-17-red)](https://www.java.com/)

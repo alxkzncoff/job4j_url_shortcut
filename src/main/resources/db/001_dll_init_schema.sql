@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS users(
+    id SERIAL PRIMARY KEY NOT NULL,
+    username VARCHAR(100) UNIQUE,
+    password VARCHAR(250)
+);
+
+CREATE TABLE IF NOT EXISTS links(
+    id SERIAL PRIMARY KEY NOT NULL,
+    url VARCHAR(500) UNIQUE,
+    code VARCHAR(50) UNIQUE,
+    views INT,
+    user_id INT REFERENCES users(id)
+);
