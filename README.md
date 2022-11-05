@@ -23,7 +23,7 @@
 - Ввести пароль;
 - Создать базу данных.
 ```bash
-  create database chat;
+  create database url_shortcut;
 ```
 
 2. Запуск при помощи maven. В терминале набрать следующие команды:
