@@ -36,7 +36,23 @@
   mvn liquibase:update
 ```
 
-3. Запуск docker образа:
+3. Запуск с помощью docker:
+Скопировать себе проект:
+```
+  git clone https://github.com/alxkzncoff/job4j_url_shortcut.git
+```
+
+Перейти в директорию проекта:
+```
+  cd job4j_url_shortcut
+```
+
+Собрать контейнер:
+```
+  docker build -t shortcut .
+```
+
+Запустить:
 ```
   docker-compose up
 ```
