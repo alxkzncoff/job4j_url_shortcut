@@ -36,6 +36,11 @@
   mvn liquibase:update
 ```
 
+3. Запуск docker образа:
+```
+  docker-compose up
+```
+
 ## Команды
 
 После запуска к серверу можно обратиться по адресу: http://localhost:8080
