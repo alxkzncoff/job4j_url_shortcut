@@ -49,7 +49,7 @@
 
 Собрать контейнер:
 ```
-  docker build -t shortcut .
+  docker build
 ```
 
 Запустить:
