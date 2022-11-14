@@ -10,51 +10,26 @@
 
 Для корректной работы приложения необходимо установить следующие программы:
 
-- Java 17 или выше;
-- PostgreSQL 14 или выше;
-- Apache Maven 3.8.3 или выше.
+- Docker
+- Docker-compose
 
-1. Настройка postgreSQL. В терминале набрать следующие команды:
+1. Запуск проекта:
 
-- Ввести логин. Вместо username указать свой;
-```bash
-  psql --username <username>
-```
-- Ввести пароль;
-- Создать базу данных.
-```bash
-  create database url_shortcut;
-```
-
-2. Запуск при помощи maven. В терминале набрать следующие команды:
-```
-  mvn spring-boot:run
-```
-
-При необходимости запустить liquibase для создания таблиц в БД.
-```
-  mvn liquibase:update
-```
-
-3. Запуск с помощью docker:
 Скопировать себе проект:
 ```
-  git clone https://github.com/alxkzncoff/job4j_url_shortcut.git
+git clone https://github.com/alxkzncoff/job4j_url_shortcut.git
 ```
 
 Перейти в директорию проекта:
 ```
-  cd job4j_url_shortcut
+cd <path>/job4j_url_shortcut
 ```
 
-Собрать контейнер:
-```
-  docker build
-```
+где ```path``` путь до проекта.
 
-Запустить:
+Собрать контейнер и запустить:
 ```
-  docker-compose up
+docker-compose up --build
 ```
 
 ## Команды
