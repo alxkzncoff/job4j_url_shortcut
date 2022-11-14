@@ -50,7 +50,7 @@ cd <path>/job4j_url_shortcut/k8s
 kubectl apply -f postgresdb-secret.yml
 ```
 
-````
+```
 kubectl apply -f postgresdb-configmap.yml
 ```
 
