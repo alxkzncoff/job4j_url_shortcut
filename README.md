@@ -10,10 +10,12 @@
 
 Для корректной работы приложения необходимо установить следующие программы:
 
-- Docker
-- Docker-compose
+- [Docker](https://docs.docker.com/engine/install/)
+- [Docker-compose](https://docs.docker.com/compose/install/)
+- [kubectl](https://kubernetes.io/docs/tasks/tools/)
+- [minikube](https://minikube.sigs.k8s.io/docs/start/)
 
-1. Запуск проекта:
+1. Запуск проекта с помощью Docker:
 
 Скопировать себе проект:
 ```
@@ -32,9 +34,39 @@ cd <path>/job4j_url_shortcut
 docker-compose up --build
 ```
 
-## Команды
+2. Развертывание и запуск кластера Kubernetes:
 
-После запуска к серверу можно обратиться по адресу: http://localhost:8080
+Перейти в папку с конфигурациоными файлами:
+
+```
+cd <path>/job4j_url_shortcut/k8s
+```
+
+где ```path``` путь до проекта.
+
+Развертывание:
+
+```
+kubectl apply -f postgresdb-secret.yml
+```
+
+````
+kubectl apply -f postgresdb-configmap.yml
+```
+
+```
+kubectl apply -f postgresdb-deployment.yml
+```
+
+```
+kubectl apply -f spring-deployment.yml
+```
+
+Запуск:
+
+```
+minikube service spring-boot-service
+```
 
 ## Пользователи
 
