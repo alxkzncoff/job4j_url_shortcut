@@ -48,17 +48,8 @@ cd <path>/job4j_url_shortcut/k8s
 
 ```
 kubectl apply -f postgresdb-secret.yml
-```
-
-```
 kubectl apply -f postgresdb-configmap.yml
-```
-
-```
 kubectl apply -f postgresdb-deployment.yml
-```
-
-```
 kubectl apply -f spring-deployment.yml
 ```
 
