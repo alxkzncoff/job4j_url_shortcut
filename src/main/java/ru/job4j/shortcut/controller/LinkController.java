@@ -62,7 +62,7 @@ public class LinkController {
         Link link = linkService.findByCode(code).orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "Wrong url code or url have not registered yet."));
         linkService.incrementViews(code);
-        return ResponseEntity.status(HttpStatus.FOUND).header("REDIRECT", link.getUrl()).build();
+        return ResponseEntity.status(HttpStatus.MOVED_PERMANENTLY).header("Location", link.getUrl()).build();
     }
 
     @GetMapping("/statistic")
